@@ -28,3 +28,9 @@ sudo apt-get install -y kubeadm=1.13.4-00 kubelet=1.13.4-00 kubectl=1.13.4-00 ku
 sudo apt-mark hold kubelet kubeadm kubectl
 #kubelet version
 kubeadm version
+
+
+
+echo "CALICO NETWORK"
+kubectl apply -f https://docs.projectcalico.org/v3.1/getting-started/kubernetes/installation/hosted/rbac-kdd.yaml
+kubectl apply -f https://docs.projectcalico.org/v3.1/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
